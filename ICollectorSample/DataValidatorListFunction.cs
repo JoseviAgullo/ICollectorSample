@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using ICollectorSample.Models;
 using ICollectorSample.Services;
