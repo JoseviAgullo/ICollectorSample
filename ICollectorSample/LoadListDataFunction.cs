@@ -13,7 +13,7 @@ namespace ICollectorSample
         [FunctionName("LoadListDataFunction")]
         [return: Queue("defaultListQueue")]
 		public static async Task<ListWrapper> Run(
-			[HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req, 
+			[HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "LoadListDataFunction")]HttpRequestMessage req, 
 			TraceWriter log)
         {
 			var response = new ListWrapper
