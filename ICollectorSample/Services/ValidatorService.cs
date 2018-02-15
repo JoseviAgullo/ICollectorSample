@@ -7,7 +7,7 @@ namespace ICollectorSample.Services
     {
 	    public bool ValidateElement(string itemToValidate)
 	    {
-		    Thread.Sleep(TimeSpan.FromSeconds(0.5));
+		    Thread.Sleep(TimeSpan.FromSeconds(0.1));
 
 		    return true;
 	    }

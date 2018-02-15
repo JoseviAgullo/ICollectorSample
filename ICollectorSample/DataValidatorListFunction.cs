@@ -9,6 +9,7 @@ namespace ICollectorSample
     public static class DataValidatorListFunction
 	{
 		[FunctionName("DataValidatorListFunction")]
+		[return: Queue("defaultListProcessorQueue")]
 		public static ListWrapper Run(
 			[QueueTrigger("defaultListQueue")]ListWrapper listWrapper, 
 			TraceWriter log)
@@ -29,12 +30,7 @@ namespace ICollectorSample
 
 				if (isValidElement)
 				{
-					log.Info("Valid element");
 					response.Elements.Add(element);
-				}
-				else
-				{
-					log.Warning("Invalid element");
 				}
 			}
 

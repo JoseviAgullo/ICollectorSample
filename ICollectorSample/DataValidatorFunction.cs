@@ -20,11 +20,9 @@ namespace ICollectorSample
 
 			if (isValidElement)
 			{
-				log.Info("Valid element");
 				return element;
 			}
 
-			log.Warning("Invalid element");
 			return null;
 		}
 	}

@@ -14,7 +14,7 @@ namespace ICollectorSample
 			[Queue("defaultQueue")]ICollector<string> collector,
 			TraceWriter log)
         {
-	        for (var i = 0; i < 50000; i++)
+	        for (var i = 0; i < 1000; i++)
 	        {
 		        collector.Add(i.ToString());
 	        }
